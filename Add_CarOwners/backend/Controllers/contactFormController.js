@@ -2,8 +2,8 @@ import Contact_form from "../models/ContactFormModel";
 
 export async function addCommentscontroller(req, res) {
     try {
-        const { comment, name} = req.body;
-        const newComment = new Contact_form({ comment, name });
+        const { comment, name, email} = req.body;
+        const newComment = new Contact_form({ comment, name, email });
         await newComment.save();
 
         res.status(200).json({
