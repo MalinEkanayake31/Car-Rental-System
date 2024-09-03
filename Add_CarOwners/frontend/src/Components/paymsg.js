@@ -172,27 +172,23 @@ const Paymsg = ({data}) => {
           </div>
         ):(
           <div className="w-[800px] bg-white p-10 rounded-2xl shadow-2xl ml-52 mb-10 border-l-[20px] border-indigo-500">
-            <h2 className="text-3xl font-bold mb-6">Car Payment</h2>
+            <h2 className="text-3xl font-bold mb-6">Payment Confirmation</h2>
             <p className="mb-6">
-              Thank you for returning car <span>{data.Carnumber}</span>. Here are the details of your rental:
+            Thank you for completing your payment for the rental of <span className='text-xl font-semibold '>{data.Carname}<span className='text-sm'>({data.Carnumber})</span></span>
             </p>
             <div className="text-lg mb-4">
               <p>Car Owner : {ownerdata.name} </p>
               <p>Car Name  : {data.Carname}</p>
             </div>
             <p className="mb-6">
-              We hope you had a great experience with your rental. To complete the process, please proceed with your payment for the rental period. Thank you for choosing our service!
+            We appreciate your prompt payment. We hope you enjoyed your rental experience. If you have any questions or need further assistance, feel free to contact us.
             </p>
-            <div className="text-lg font-semibold mb-6">Total Amount Due: {data.price}</div>
-            <div className="flex justify-center">
-              {/* <Button
-                gradientDuoTone="pinkToOrange"
-                className="px-8 py-3 rounded-full text-white text-lg font-medium"
-                onClick={() => setPay(true)}
-              >
-                Paid
-              </Button> */}
-              <div className="flex items-center px-8 py-3 rounded-2xl bg-gradient-to-r from-green-300 to-green-800 text-lg font-medium">Paid<IoMdDoneAll className='ml-3'/></div>
+            <div className="text-lg font-semibold mb-6">Thank you for choosing our service!😊</div>
+            <div className="w-fit mx-auto">
+              <div className="flex w-fit mx-auto mb-6 items-center px-8 py-3 rounded-2xl bg-gradient-to-r from-green-300 to-green-800 text-lg font-medium">Paid<IoMdDoneAll className='ml-3'/></div>
+              <a className="cursor-pointer font-serif underline hover:text-red-600" onClick={() => setPay(true)}>
+                Add some feedback for Car
+              </a>
             </div>
           </div>
         )

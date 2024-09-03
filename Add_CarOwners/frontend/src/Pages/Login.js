@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import NavBar from "../Components/NavBar";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
 import { toast } from 'react-toastify';
 
@@ -82,7 +82,8 @@ const Login = () => {
                 LOGIN
               </button>
             </form>
-            <span className="ml-10 text-orange-500">Forgot Password?</span>
+            <span className="ml-10 text-black">Don't Have Account?</span>
+            <Link to='/Signup' className="text-orange-500">Sign Up</Link>
           </div>
           <div className="w-[680px] mt-10">
             <span className="text-3xl text-black font-semibold  pl-10 ">

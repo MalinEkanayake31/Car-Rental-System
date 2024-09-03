@@ -118,14 +118,14 @@ const SignUp = () => {
               </div>
               <div>
                 <label className="">
-                  <input type="checkbox" className="w-3 h-3 mr-3 mb-5" />I Agree
+                  <input type="checkbox" className="w-3 h-3 mr-3 " />I Agree
                   to the{" "}
                   <span className="text-orange-500">Terms and Conditions</span>
                 </label>
               </div>
               <button
                 type="submit"
-                className="w-3/4 text-white h-10 bg-orange-500 mt-10"
+                className="w-3/4 text-white h-10 bg-orange-500 mt-8 mb-5"
               >
                 SIGN UP
               </button>

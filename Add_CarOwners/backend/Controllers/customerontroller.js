@@ -19,12 +19,12 @@ export const viewProfile = async (req, res, next) => {
 
 export const updateCustomerProfile = async (req, res, next) => {
     const id = req.params.id;
-    const { username, email, mobile, nic} = req.body;
+    const { profilepicture, username, email, mobile, nic} = req.body;
     
     try {
         const updatedCustomer = await User.findByIdAndUpdate(
             id,
-            { username,email, mobile, nic},
+            {profilepicture, username,email, mobile, nic},
         );
 
         if(!updatedCustomer){
